@@ -10,7 +10,10 @@ function App() {
       <Prop name="BET" heroName="Batman">
         <p>I'm so cool.</p>
       </Prop>
-      <Prop name="Hello" heroName="Cool"/>
+      <Prop name="cool" heroName="Cool">
+        <button>Action</button>
+      </Prop>
+      
       <Prop name="World" heroName="Wow"/>
       {/* <Greet/>
       <Welcome/> */}
