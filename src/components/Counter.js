@@ -9,13 +9,30 @@ class Counter extends Component {
             count: 0
         }
     }
-
+    //previous increment that does not use parameter call in
+    // increment() {
+    //     //setstate will rerender component
+    //     this.setState({
+    //         count: this.state.count + 1
+    //     },
+    //         () => {
+    //             //do not put code right after setstate. you want it in this created block
+    //             console.log('Callback value', this.state.count)
+    //         })
+    //         //never have code below
+    //         // / console.log('Callback value', this.state.count)
+    // }
     increment() {
-        //setstate will rerender component
-        this.setState({
-            count: this.state.count + 1
-        })
-
+        this.setState((prevState) => ({
+            count: prevState.count + 1
+        }))
+    }
+    incrementFive() {
+        this.increment();
+        this.increment();
+        this.increment();
+        this.increment();
+        this.increment();
     }
 
     render() {
@@ -25,6 +42,7 @@ class Counter extends Component {
                     Count - {this.state.count}
                 </div>
                 <button onClick={() => this.increment()}>Increment</button>
+                <button onClick={() => this.incrementFive()}>IncrementFive</button>
             </div>);
     }
 }
