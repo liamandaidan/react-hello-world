@@ -8,6 +8,7 @@ import Greet from './components/Greet';
 import FunctionClick from './components/FunctionClick';
 import ClassClick from './components/ClassClick';
 import EventBind from './components/EventBind';
+import ParentComponet from './components/ParentComponet';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <Greet name="liam" heroName="ya boi" />
       {/* <FunctionClick />
       <ClassClick /> */}
-      <EventBind></EventBind>
+      <ParentComponet/>
     </div>
   );
 }
