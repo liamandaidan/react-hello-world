@@ -24,6 +24,8 @@ export class NewForm extends Component {
 
   handleSubmit = (event) => {
     alert(`${this.state.username} ${this.state.comments}`);
+    //stops form from refreshing
+    event.preventDefault()
   };
 
   //step 1 create forms
